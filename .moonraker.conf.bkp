@@ -54,3 +54,23 @@ managed_services = klipper
 info_tags = 
 	desc=Cartographer Probe
 
+[update_manager sonar]
+type = git_repo
+path = ~/sonar
+origin = https://github.com/mainsail-crew/sonar.git
+primary_branch = main
+managed_services = sonar
+install_script = tools/install.sh
+
+[update_manager CartographerSurveyBeta]
+type = git_repo
+path = ~/Carto_TAP
+origin = https://github.com/Cartographer3D/Carto_TAP.git
+env = ~/klippy-env/bin/python
+install_script = install.sh
+is_system_service = False
+managed_services = klipper
+requirements = requirements.txt
+info_tags = 
+	desc=Cartographer Survey - BETA
+
