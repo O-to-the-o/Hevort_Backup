@@ -74,3 +74,11 @@ requirements = requirements.txt
 info_tags = 
 	desc=Cartographer Survey - BETA
 
+[update_manager nevermore]
+type = git_repo
+path = ~/nevermore-controller
+origin = https://github.com/sanaahamel/nevermore-controller.git
+primary_branch = main
+is_system_service = False
+managed_services = klipper
+
